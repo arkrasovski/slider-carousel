@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Slider</title>
+  </head>
+  <body>
+    <section id="companies" class="companies">
+      <div class="container">
+        <h2>Нам доверяют!</h2>
+        <div class="underline"></div>
+        <div class="companies-wrapper">
+          <div class="companies-hor">
+            <div class="companies-hor-item">
+              <img src="images/companies/companies-1.png" />
+            </div>
+            <div class="companies-hor-item">
+              <img src="images/companies/companies-2.png" />
+            </div>
+            <div class="companies-hor-item">
+              <img src="images/companies/companies-3.png" />
+            </div>
+            <div class="companies-hor-item">
+              <img src="images/companies/companies-4.jpg" />
+            </div>
+            <div class="companies-hor-item">
+              <img src="images/companies/companies-5.jpg" />
+            </div>
+            <div class="companies-hor-item">
+              <img src="images/companies/companies-6.png" />
+            </div>
+            <div class="companies-hor-item">
+              <img src="images/companies/companies-7.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+
+    <script>
+      const options = {
+        main: ".companies-wrapper",
+        wrap: ".companies-hor",
+        position: 0,
+        prev: "#test-left",
+        next: "#test-right",
+        slidesToShow: 4,
+        infinity: true,
+
+        responsive: [
+          {
+            breakpoint: 1024,
+            slidesToShow: 3,
+          },
+          {
+            breakpoint: 768,
+            slidesToShow: 2,
+          },
+          {
+            breakpoint: 576,
+            slidesToShow: 1,
+          },
+        ],
+      };
+
+      const carousel = new SliderCarousel(options);
+      carousel.init();
+    </script>
+  </body>
+</html>
